@@ -1,0 +1,237 @@
+<option value="AUD">AUD</option>
+<option value="BGN">BGN</option>
+<option value="BRL">BRL</option>
+<option value="CAD">CAD</option>
+<option value="CHF">CHF</option>
+<option value="CNY">CNY</option>
+<option value="CZK">CZK</option>
+<option value="DKK">DKK</option>
+<option value="EUR">EUR</option>
+<option value="GBP">GBP</option>
+<option value="HKD">HKD</option>
+<option value="HRK">HRK</option>
+<option value="HUF">HUF</option>
+<option value="ILS">ILS</option>		
+<option value="INR">INR</option>
+<option value="JPY">JPY</option>
+<option value="KRW">KRW</option>
+<option value="MXN">MXN</option>
+<option value="MYR">MYR</option>
+<option value="NOK">NOK</option>
+<option value="NZD">NZD</option>
+<option value="PHP">PHP</option>
+<option value="PLN">PLN</option>
+<option value="RON">RON</option>
+<option value="RUB">RUB</option>
+<option value="SEK">SEK</option>
+<option value="SGD">SGD</option>
+<option value="THB">THB</option>
+<option value="TRY">TRY</option>
+<option value="USD">USD</option>
+<option value="ZAR">ZAR</option>
+
+{% extends "index.html" %}
+
+{% block header %}
+<h1>Dahsboard</h1>
+{% endblock %}
+
+{% block main %}
+<h3>Latest Currencies</h3>
+<div class="container" align="center">
+	<table style="width:50%">
+		<tr>
+			<th>Symbol</th>
+			<th>Code</th>
+			<th>Currency</th> 
+			<th>Daily Rate</th>
+		</tr>
+		<tr>
+			<td>$</td> 
+			<td>AUD</td>
+			<td>Australian Dollar</td>
+			<td>{{AUD}}</td>	    
+		</tr>
+		<tr>
+			<td>лв</td> 
+			<td>BGN</td>
+			<td>Bulgarian Lev</td>
+			<td>{{BGN}}</td>
+		</tr>
+		<tr>
+			<td>R$</td> 
+			<td>BRL</td>
+			<td>Brazilian Real</td>
+			<td>{{BRL}}</td>	    
+		</tr>
+		<tr>
+			<td>$</td> 
+			<td>CAD</td>
+			<td>Canadian Dollar</td>
+			<td>{{CAD}}</td>	    
+		</tr>
+		<tr>
+			<td>$</td> 
+			<td>CHF</td>
+			<td>Swiss Franc</td>
+			<td>{{CHF}}</td>	    
+		</tr>
+		<tr>
+			<td>¥</td> 
+			<td>CNY</td>
+			<td>Chinese Yuan</td>
+			<td>{{CNY}}</td>	    
+		</tr>
+		<tr>
+			<td>Kč</td> 
+			<td>CZK</td>
+			<td>Czech Republic Koruna</td>
+			<td>{{CZK}}</td>	    
+		</tr>
+		<tr>
+			<td>kr</td> 
+			<td>DKK</td>
+			<td>Danish Krone</td>
+			<td>{{DKK}}</td>	    
+		</tr>
+		<tr>
+			<td>€</td> 
+			<td>EUR</td>
+			<td>Euro</td>
+			<td>{{EUR}}</td>	    
+		</tr>
+		<tr>
+			<td>£</td>
+			<td>GBP</td>
+			<td>British Pound Sterling</td>
+			<td>{{GBP}}</td>
+		</tr>
+		<tr>
+			<td>$</td> 
+			<td>HKD</td>
+			<td>Hong Kong Dollar</td>
+			<td>{{HKD}}</td>	    
+		</tr>
+		<tr>
+			<td>kn</td> 
+			<td>HRK</td>
+			<td>Croatian Kuna</td>
+			<td>{{HRK}}</td>	    
+		</tr>
+		<tr>
+			<td>Ft</td> 
+			<td>HUF</td>
+			<td>Hungarian Forint</td>
+			<td>{{HUF}}</td>	    
+		</tr>
+		<tr>
+			<td>₪</td> 
+			<td>ILS</td>
+			<td>Israeli Shekel</td>
+			<td>{{ILS}}</td>	    
+		</tr>
+		<tr>
+			<td>₹</td>
+			<td>INR</td>
+			<td>Indian Rupee</td>
+			<td>{{INR}}</td>
+		</tr>
+		<tr>
+			<td>¥</td> 
+			<td>JPY</td>
+			<td>Japanese Yen</td>
+			<td>{{JPY}}</td>	    
+		</tr>
+		<tr>
+			<td>₩</td> 
+			<td>KRW</td>
+			<td>Korean Won</td>
+			<td>{{KRW}}</td>	    
+		</tr>
+		<tr>
+			<td>$</td> 
+			<td>MXN</td>
+			<td>Mexican Peso</td>
+			<td>{{MXN}}</td>	    
+		</tr>
+		<tr>
+			<td>RM</td> 
+			<td>MYR</td>
+			<td>Malaysian Ringgit</td>
+			<td>{{MYR}}</td>	    
+		</tr>
+		<tr>
+			<td>kr</td> 
+			<td>NOK</td>
+			<td>Norwegian Krone</td>
+			<td>{{NOK}}</td>	    
+		</tr>
+		<tr>
+			<td>$</td> 
+			<td>NZD</td>
+			<td>New Zealand Dollar</td>
+			<td>{{NZD}}</td>	    
+		</tr>
+		<tr>
+			<td>₱</td> 
+			<td>PHP</td>
+			<td>Philippines Peso</td>
+			<td>{{PHP}}</td>	    
+		</tr>
+		<tr>
+			<td>zł</td> 
+			<td>PLN</td>
+			<td>Polish Zloty</td>
+			<td>{{PLN}}</td>	    
+		</tr>
+		<tr>
+			<td>lei</td> 
+			<td>RON</td>
+			<td>Romania New Leu</td>
+			<td>{{RON}}</td>	    
+		</tr>
+		<tr>
+			<td>₽</td> 
+			<td>RUB</td>
+			<td>Russian Ruble</td>
+			<td>{{RUB}}</td>	    
+		</tr>
+		<tr>
+			<td>kr</td> 
+			<td>SEK</td>
+			<td>Swedish Krona</td>
+			<td>{{SEK}}</td>	    
+		</tr>
+		<tr>
+			<td>$</td> 
+			<td>SGD</td>
+			<td>Singapore Dollar</td>
+			<td>{{SGD}}</td>	    
+		</tr>
+		<tr>
+			<td>฿</td> 
+			<td>THB</td>
+			<td>Thai Baht</td>
+			<td>{{THB}}</td>	    
+		</tr>
+		<tr>
+			<td>₺</td> 
+			<td>TRY</td>
+			<td>Turkish Lira</td>
+			<td>{{TRY}}</td>	    
+		</tr>
+		<tr>
+			<td>$</td>
+			<td>USD</td>
+			<td>United States Dollar</td>
+			<td>{{USD}}</td>
+		</tr>
+		<tr>
+			<td>R</td> 
+			<td>ZAR</td>
+			<td>South African Rand</td>
+			<td>{{ZAR}}</td>	    
+		</tr>
+	</table>
+</div>
+{% endblock %}

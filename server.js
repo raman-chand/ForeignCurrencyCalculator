@@ -38,7 +38,7 @@ mongoose.connect(config.url);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-	console.log("Successfully connected to Database.\n" + config.url + "\nConnected to Port 8005");
+	console.log("Successfully connected to Database.\n" + config.url);
 
 	// Load Models
 	app.models = require('./models/index');
