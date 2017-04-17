@@ -44,11 +44,13 @@ db.once('open', function() {
 	app.models = require('./models/index');
 	// Load Routes
 	const index = require('./routes/index'),
-		calculator = require('./routes/calculator');
+		calculator = require('./routes/calculator'),
+		dashboard = require('./routes/dashboard');
 
 // Routes Middleware
 	app.use('/', index.registerRouter());
 	app.use('/calculator', calculator.registerRouter());
+	app.use('/dashboard', dashboard.registerRouter());
 
 	var server = app.listen(8009, () => {
 		var port = server.address().port;
