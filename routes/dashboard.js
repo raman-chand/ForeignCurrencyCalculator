@@ -11,6 +11,8 @@ module.exports = {
 		});
 
 		router.get('/', dashboardCon.index);
+		router.get('/latest', dashboardCon.latest);
+		router.get('/historical', dashboardCon.historical);
 
 		return router;
 	}

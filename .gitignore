@@ -3,7 +3,7 @@
 node_modules
 .eslintrc.*
 *.box
-config/oxrKey.js
+config/oxr.js
 
 # Logs
 npm-debug.log*

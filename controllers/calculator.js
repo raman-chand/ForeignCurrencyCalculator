@@ -2,7 +2,7 @@ const express = require('express'),
  Calculator = require('../models/calculator'),
  fx = require('money'),
  oxr = require('open-exchange-rates'),
- config = require('../config/oxrKey'),
+ config = require('../config/oxr'),
  mongoose = require('mongoose'),
  db = mongoose.connection;
 oxr.set({app_id: config.key});
@@ -41,10 +41,26 @@ module.exports = {
             convertToAmount = (fx(amount).from(fromCurrency).to(toCurrency));
             exchangeRate = (convertToAmount / amount);
 
+            // res.json({
+            //   success: true,
+            //   calculator: {
+            //     fromCurrency: calculator.fromCurrency,
+            //     toCurrency: calculator.toCurrency,
+            //     amount: calculator.amount,
+            //     convertToAmount,
+            //     exchangeRate
+            //   }
+            // });
             res.render('calculator', {amount: amount, convertToAmount: convertToAmount, exchangeRate: exchangeRate, success: req.flash('success')});
-          });
+          })
         }
       });
+      // .then((calculator) => {
+      //   res.redirect('/submit');
+      // }).catch((err) => {
+      //   console.log(JSON.stringify(err));
+      //   res.render('calculator');
+      // });
     });
   }
-}
+};
