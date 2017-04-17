@@ -11,7 +11,7 @@ module.exports = {
 		});
 
 		router.get('/', calculatorCon.index);
-		router.post('/', calculatorCon.convert);
+		router.post('/convert', calculatorCon.convert);
 
 		return router;
 	}
