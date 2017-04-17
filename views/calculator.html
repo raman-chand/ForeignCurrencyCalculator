@@ -1,0 +1,105 @@
+{% extends "index.html" %}
+
+{% block header %}
+<h1>Currency Calculator</h1>
+{% endblock %}
+
+{% block main %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<form name="calculator" method="post" action="/calculator">
+				<div class="col-md-6">
+				<label>Base Currency</label>
+					<select required="required" class="form-control" name="fromCurrency">
+						<option value="" selected>Select Base Currency</option>
+						<option value="AUD">AUD</option>
+						<option value="BGN">BGN</option>
+						<option value="BRL">BRL</option>
+						<option value="CAD">CAD</option>
+						<option value="CHF">CHF</option>
+						<option value="CNY">CNY</option>
+						<option value="CZK">CZK</option>
+						<option value="DKK">DKK</option>
+						<option value="EUR">EUR</option>
+						<option value="GBP">GBP</option>
+						<option value="HKD">HKD</option>
+						<option value="HRF">HRF</option>
+						<option value="HUF">HUF</option>
+						<option value="ILS">ILS</option>		
+						<option value="INR">INR</option>
+						<option value="JPY">JPY</option>
+						<option value="KRW">KRW</option>
+						<option value="MXN">MXN</option>
+						<option value="MYR">MYR</option>
+						<option value="NOK">NOK</option>
+						<option value="NZD">NZD</option>
+						<option value="PHP">PHP</option>
+						<option value="PLN">PLN</option>
+						<option value="RON">RON</option>
+						<option value="RUB">RUB</option>
+						<option value="SEK">SEK</option>
+						<option value="SGD">SGD</option>
+						<option value="THB">THB</option>
+						<option value="TRY">TRY</option>
+						<option value="USD">USD</option>
+						<option value="ZAR">ZAR</option>
+					</select>
+				</div>
+				<div class="col-md-6">
+				<label>Current Currency</label>
+					<select required="required" class="form-control" name="toCurrency">
+						<option value="" selected>Select Current Currency</option>
+						<option value="AUD">AUD</option>
+						<option value="BGN">BGN</option>
+						<option value="BRL">BRL</option>
+						<option value="CAD">CAD</option>
+						<option value="CHF">CHF</option>
+						<option value="CNY">CNY</option>
+						<option value="CZK">CZK</option>
+						<option value="DKK">DKK</option>
+						<option value="EUR">EUR</option>
+						<option value="GBP">GBP</option>
+						<option value="HKD">HKD</option>
+						<option value="HRF">HRF</option>
+						<option value="HUF">HUF</option>
+						<option value="ILS">ILS</option>
+						<option value="INR">INR</option>
+						<option value="JPY">JPY</option>
+						<option value="KRW">KRW</option>
+						<option value="MXN">MXN</option>
+						<option value="MYR">MYR</option>
+						<option value="NOK">NOK</option>
+						<option value="NZD">NZD</option>
+						<option value="PHP">PHP</option>
+						<option value="PLN">PLN</option>
+						<option value="RON">RON</option>
+						<option value="RUB">RUB</option>
+						<option value="SEK">SEK</option>
+						<option value="SGD">SGD</option>
+						<option value="THB">THB</option>
+						<option value="TRY">TRY</option>
+						<option value="USD">USD</option>
+						<option value="ZAR">ZAR</option>
+					</select>
+				</div>
+				<div class="col-md-12" id="calculator-amount">
+					<label>Amount</label>
+					<input type="text" name="amount" ng-model="amount" id="amount">
+				</div>
+				<div class="col-md-12">
+					<input type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<p>Amount: {{amount}}</p>
+			<p>Converted Amount: {{convertToAmount}}</span></p>
+			<p>Exchange Rate: {{exchangeRate}}</p>
+			<p>Error: {{note}}</p>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+.DS_Store
+.vagrant
+node_modules
+.eslintrc.*
+*.box
+config/oxrKey.js
+
+# Logs
+npm-debug.log*
+
+# Runtime data
+*.seed
