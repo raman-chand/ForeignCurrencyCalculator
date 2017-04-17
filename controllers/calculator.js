@@ -51,7 +51,7 @@ module.exports = {
             //     exchangeRate
             //   }
             // });
-            res.render('calculator', {amount: amount, convertToAmount: convertToAmount, exchangeRate: exchangeRate, success: req.flash('success')});
+            res.render('calculator', {amount: amount, convertToAmount: convertToAmount, success: req.flash('success')});
           })
         }
       });
