@@ -10,8 +10,8 @@ module.exports = {
 			next();
 		});
 
-		router.get('/', calculatorCon.index);
-		router.post('/convert', calculatorCon.convert);
+		router.post('/', calculatorCon.index);
+		router.get('/conversion', calculatorCon.submit);
 
 		return router;
 	}
