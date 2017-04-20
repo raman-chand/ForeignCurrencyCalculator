@@ -31,6 +31,6 @@ module.exports = {
 		oxr.historical('2001-02-03', function() {
 			console.log(oxr.rates);
 			res.json(oxr.rates);
-		})
+		});
 	}
 };
