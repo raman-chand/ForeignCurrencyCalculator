@@ -9,10 +9,6 @@ oxr.set({app_id: config.key});
 
 module.exports = {  
   index(req, res, next){
-    // const fromCurrency = req.body.fromCurrency,
-    // toCurrency = req.body.toCurrency,
-    // amount = req.body.amount;
-
     let newCalculator = new Calculator({
       fromCurrency: req.body.fromCurrency,
       toCurrency: req.body.toCurrency,
@@ -30,41 +26,31 @@ module.exports = {
     });
   },
   submit(req, res, next) {
-    // Get the last inserted document.
-    // Use the fromCurrency, toCurrency, and amount to calculate the convertToAmount.
     var convertToAmount;
     var fromCurrency;
     var toCurrency;
     var amount;
+    
+    // Get the last inserted document.
     db.collection('calculators').find({}).limit(1).sort({$natural:-1}).toArray((err, calculator) => {
       if (err) { throw err; }
       if (!calculator) { return res.json({success: false, msg: "Something went wrong with getting the calculations"}); }
-      console.log(calculator); // how do i get the three values i need from the doc.?
-      res.json({
-        success: true,
-        calculator: calculator[0].fromCurrency
-      });
-
       fromCurrency = calculator[0].fromCurrency;
       toCurrency = calculator[0].toCurrency;
       amount = calculator[0].amount;
 
-      oxr.latest(function() {
+      // Convert the amount
+      oxr.latest(() => {
         fx.rates = oxr.rates;
         fx.base = oxr.base;
         convertToAmount = (fx(amount).from(fromCurrency).to(toCurrency));
+        console.log(convertToAmount + "::" + amount);
+        return res.json({
+          success: true,
+          amount,
+          convertToAmount
+        });
       });
     });
-    // res.json({calculator: req.calculator});
   }
 };
-
-
-// .then((calculator) => {
-//   res.redirect('/submit');
-// }).catch((err) => {
-//   console.log(JSON.stringify(err));
-//   res.render('calculator');
-// });
-
-// res.render('calculator/calculator', {amount: amount, convertToAmount: convertToAmount, success: req.flash('success')});
