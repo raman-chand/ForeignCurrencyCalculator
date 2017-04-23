@@ -47,6 +47,8 @@ module.exports = {
         console.log(convertToAmount + "::" + amount);
         return res.json({
           success: true,
+          fromCurrency,
+          toCurrency,
           amount,
           convertToAmount
         });

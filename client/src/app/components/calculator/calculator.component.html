@@ -4,7 +4,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<form (submit)="onCalculate()">
+			<form (submit)="onCalculateSubmit()">
 				<div class="col-md-12">
 					<label>Base Currency</label>
 					<select [(ngModel)]="fromCurrency" required="required" class="form-control" name="fromCurrency">
@@ -85,9 +85,6 @@
 					<input type="submit" class="btn btn-primary" value="Calculate">
 				</div>
 			</form>
-		</div>
-		<div class="col-md-6">
-			<!-- Conversion Component -->
 		</div>
 	</div>
 </div>

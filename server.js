@@ -9,16 +9,18 @@ const express = require('express'),
  oxr = require('open-exchange-rates'),
  fx = require('money'),
  config = require('./config/database'),
+ cors = require('cors'),
  path = require('path');
 
 const app = express();
-app.use(methodOverride('_method'));
-app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(cors());
 app.use(flash());
 app.use(expressSession(({ secret: 'keyboard cat', resave: false, saveUninitialized: true })));
 app.use(express.static(__dirname + '/public'));
+app.use(methodOverride('_method'));
 
 // View Engine backup for Angular JS
 app.engine('html', engines.nunjucks);

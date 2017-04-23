@@ -1,8 +1,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 	<p>Sidenav</p>
 	<ul>
-		<li><a [routerLinkActive]="['active']" [routerLink]="['/']">Home</a></li>
-		<li><a [routerLinkActive]="['active']" [routerLink]="['/calculator']">Calculator</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']">Home</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/calculator']">Calculator</a></li>
 	</ul>
 </nav>
 
