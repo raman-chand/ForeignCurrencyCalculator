@@ -2,19 +2,36 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
+import { ValidateService } from './services/validate.service';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CalculatorComponent } from './components/calculator/calculator.component';
+
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'calculator', component: CalculatorComponent}
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    CalculatorComponent 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes),
+    FlashMessagesModule
   ],
-  providers: [],
+  providers: [ValidateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
