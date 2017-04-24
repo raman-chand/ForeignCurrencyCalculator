@@ -10,7 +10,8 @@ const express = require('express'),
  fx = require('money'),
  config = require('./config/database'),
  cors = require('cors'),
- path = require('path');
+ path = require('path'),
+ passport = require('passport');
 
 const app = express();
 app.use(bodyParser.json());
@@ -21,6 +22,9 @@ app.use(flash());
 app.use(expressSession(({ secret: 'keyboard cat', resave: false, saveUninitialized: true })));
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/passport')(passport);
 
 // View Engine backup for Angular JS
 app.engine('html', engines.nunjucks);
