@@ -48,15 +48,18 @@ db.once('open', () => {
 
 	// Load Models
 	app.models = require('./models/index');
+	
 	// Load Routes
 	const index = require('./routes/index'),
 		calculator = require('./routes/calculator'),
-		dashboard = require('./routes/dashboard');
+		dashboard = require('./routes/dashboard'),
+		users = require('./routes/users');
 
 // Routes Middleware
 	app.use('/', index.registerRouter());
 	app.use('/calculator', calculator.registerRouter());
 	app.use('/dashboard', dashboard.registerRouter());
+	app.use('/users', users.registerRouter());
 
 	var server = app.listen(8009, () => {
 		var port = server.address().port;
