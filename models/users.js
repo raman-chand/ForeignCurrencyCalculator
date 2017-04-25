@@ -6,8 +6,7 @@ const mongoose = require('mongoose'),
 const UserSchema = mongoose.Schema({
 	employeeId: {
 		type: String,
-		required: true,
-		index: true
+		required: true
 	},
 	name: {
 		type: String,
