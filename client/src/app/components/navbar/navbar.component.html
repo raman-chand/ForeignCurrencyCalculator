@@ -1,14 +1,14 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 	<p>Sidenav</p>
 	<ul>
+		<!-- Unrestricited Links -->
 		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']">Home</a></li>
 		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/calculator']">Calculator</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/register']">Register</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/login']">Login</a></li>
+
+		<!-- Restricted Links -->
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/profile']">Profile</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/dashboard']">Dashboard</a></li>
 	</ul>
 </nav>
-
-<!-- <nav>
-	<ul >
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLinkActive]="['active']" [routerLink]="[/]">Home</a></li>
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLinkActive]="['active']" [routerLink]="['/calculator']">Calculator</a></li>
-	</ul>
-</nav> -->
