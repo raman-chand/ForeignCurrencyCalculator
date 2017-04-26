@@ -10,7 +10,7 @@ export class AuthService {
 
   // Connects Backend api
 
-  // User auth.service
+  // Calculator auth.service
   calculateConversion(calculator){
     // Set Headers
     let headers = new Headers();
@@ -26,5 +26,13 @@ export class AuthService {
   	headers.append('Content-Type', 'application/JSON');
   	return this.http.get('http://localhost:8009/calculator/conversion', {headers: headers})
   		.map(res => res.json());
+  }
+
+  // User auth.service
+  registerUser(user) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/JSON');
+    return this.http.post('http://localhost:8009/users/register', user, {headers: headers})
+      .map(res => res.json());
   }
 }
