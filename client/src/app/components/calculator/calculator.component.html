@@ -6,7 +6,7 @@
 		<div class="col-md-6">
 			<form (submit)="onCalculateSubmit()">
 				<div class="col-md-12">
-					<label>Base Currency</label>
+					<label>From the currency I have:</label>
 					<select [(ngModel)]="fromCurrency" required="required" class="form-control" name="fromCurrency">
 						<option name="fromCurrency" value="AUD">AUD</option>
 						<option name="fromCurrency" value="BGN">BGN</option>
@@ -42,7 +42,7 @@
 					</select>
 				</div>
 				<div class="col-md-12">
-					<label>Currency Currency</label>
+					<label>To the currency I want:</label>
 					<select [(ngModel)]="toCurrency" required="required" class="form-control" name="toCurrency">
 						<option name="toCurrency" value="AUD">AUD</option>
 						<option name="toCurrency" value="BGN">BGN</option>

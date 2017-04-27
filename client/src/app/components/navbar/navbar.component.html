@@ -1,14 +1,20 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 	<p>Sidenav</p>
 	<ul>
-		<!-- Unrestricited Links -->
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']">Home</a></li>
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/calculator']">Calculator</a></li>
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/register']">Register</a></li>
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/login']">Login</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/']">Home</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/calculator']">Calculator</a></li>
+		<hr/>
+	</ul>
+	<!-- Move admin closer to the bottom of the nav -->
+	<h3>Admin</h3>
+	<ul>
+		<!-- If user is not logged in -->
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/register']">Register</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/login']">Login</a></li>
 
-		<!-- Restricted Links -->
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/profile']">Profile</a></li>
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+		<!-- If User is logged in -->
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true}"><a [routerLink]="['/profile']">Profile</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+		<li><a (click)="onLogoutClick()" href="#">Logout</a></li>
 	</ul>
 </nav>
