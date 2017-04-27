@@ -13,24 +13,6 @@ export class AuthService {
 
   // Connects Backend api
 
-  // Calculator auth.service
-  calculateConversion(calculator){
-    // Set Headers
-    let headers = new Headers();
-    // Content-Type
-    headers.append('Content-Type', 'application/JSON');
-    // Return observable with response
-    return this.http.post('http://localhost:8009/calculator', calculator, {headers: headers})
-      .map(res => res.json());
-  }
-
-  getConversion() {
-  	let headers = new Headers();
-  	headers.append('Content-Type', 'application/JSON');
-  	return this.http.get('http://localhost:8009/calculator/conversion', {headers: headers})
-  		.map(res => res.json());
-  }
-
   // User auth.service
   registerUser(user) {
     let headers = new Headers();
@@ -75,7 +57,7 @@ export class AuthService {
 
   // Login Service
   loggedIn() {
-    return tokenNotExpired();
+    return tokenNotExpired('id_token');
   }
 
   // Logout Service
@@ -85,6 +67,24 @@ export class AuthService {
     this.user = null;
     // Clear local storage
     localStorage.clear();
+  }
+  
+  // Calculator auth.service
+  calculateConversion(calculator){
+    // Set Headers
+    let headers = new Headers();
+    // Content-Type
+    headers.append('Content-Type', 'application/JSON');
+    // Return observable with response
+    return this.http.post('http://localhost:8009/calculator', calculator, {headers: headers})
+      .map(res => res.json());
+  }
+
+  getConversion() {
+  	let headers = new Headers();
+  	headers.append('Content-Type', 'application/JSON');
+  	return this.http.get('http://localhost:8009/calculator/conversion', {headers: headers})
+  		.map(res => res.json());
   }
 
 }

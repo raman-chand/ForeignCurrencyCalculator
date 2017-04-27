@@ -25,8 +25,8 @@ const appRoutes: Routes = [
   {path: 'calculator/conversion', component: ConversionComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'dashboard', component: DashboardComponent}
+  {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]},
+  {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]}
 ]
 
 @NgModule({

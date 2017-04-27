@@ -1,90 +1,88 @@
-<div class="container-fluid">
-	<div class="row">
-		<h2 class="page-header">Calculator</h2>
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			<form (submit)="onCalculateSubmit()">
-				<div class="col-md-12">
-					<label>From the currency I have:</label>
-					<select [(ngModel)]="fromCurrency" required="required" class="form-control" name="fromCurrency">
-						<option name="fromCurrency" value="AUD">AUD</option>
-						<option name="fromCurrency" value="BGN">BGN</option>
-						<option name="fromCurrency" value="BRL">BRL</option>
-						<option name="fromCurrency" value="CAD">CAD</option>
-						<option name="fromCurrency" value="CHF">CHF</option>
-						<option name="fromCurrency" value="CNY">CNY</option>
-						<option name="fromCurrency" value="CZK">CZK</option>
-						<option name="fromCurrency" value="DKK">DKK</option>
-						<option name="fromCurrency" value="EUR">EUR</option>
-						<option name="fromCurrency" value="GBP">GBP</option>
-						<option name="fromCurrency" value="HKD">HKD</option>
-						<option name="fromCurrency" value="HRK">HRK</option>
-						<option name="fromCurrency" value="HUF">HUF</option>
-						<option name="fromCurrency" value="ILS">ILS</option>
-						<option name="fromCurrency" value="INR">INR</option>
-						<option name="fromCurrency" value="JPY">JPY</option>
-						<option name="fromCurrency" value="KRW">KRW</option>
-						<option name="fromCurrency" value="MXN">MXN</option>
-						<option name="fromCurrency" value="MYR">MYR</option>
-						<option name="fromCurrency" value="NOK">NOK</option>
-						<option name="fromCurrency" value="NZD">NZD</option>
-						<option name="fromCurrency" value="PHP">PHP</option>
-						<option name="fromCurrency" value="PLN">PLN</option>
-						<option name="fromCurrency" value="RON">RON</option>
-						<option name="fromCurrency" value="RUB">RUB</option>
-						<option name="fromCurrency" value="SEK">SEK</option>
-						<option name="fromCurrency" value="SGD">SGD</option>
-						<option name="fromCurrency" value="THB">THB</option>
-						<option name="fromCurrency" value="TRY">TRY</option>
-						<option name="fromCurrency" value="USD">USD</option>
-						<option name="fromCurrency" value="ZAR">ZAR</option>
-					</select>
-				</div>
-				<div class="col-md-12">
-					<label>To the currency I want:</label>
-					<select [(ngModel)]="toCurrency" required="required" class="form-control" name="toCurrency">
-						<option name="toCurrency" value="AUD">AUD</option>
-						<option name="toCurrency" value="BGN">BGN</option>
-						<option name="toCurrency" value="BRL">BRL</option>
-						<option name="toCurrency" value="CAD">CAD</option>
-						<option name="toCurrency" value="CHF">CHF</option>
-						<option name="toCurrency" value="CNY">CNY</option>
-						<option name="toCurrency" value="CZK">CZK</option>
-						<option name="toCurrency" value="DKK">DKK</option>
-						<option name="toCurrency" value="EUR">EUR</option>
-						<option name="toCurrency" value="GBP">GBP</option>
-						<option name="toCurrency" value="HKD">HKD</option>
-						<option name="toCurrency" value="HRK">HRK</option>
-						<option name="toCurrency" value="HUF">HUF</option>
-						<option name="toCurrency" value="ILS">ILS</option>
-						<option name="toCurrency" value="INR">INR</option>
-						<option name="toCurrency" value="JPY">JPY</option>
-						<option name="toCurrency" value="KRW">KRW</option>
-						<option name="toCurrency" value="MXN">MXN</option>
-						<option name="toCurrency" value="MYR">MYR</option>
-						<option name="toCurrency" value="NOK">NOK</option>
-						<option name="toCurrency" value="NZD">NZD</option>
-						<option name="toCurrency" value="PHP">PHP</option>
-						<option name="toCurrency" value="PLN">PLN</option>
-						<option name="toCurrency" value="RON">RON</option>
-						<option name="toCurrency" value="RUB">RUB</option>
-						<option name="toCurrency" value="SEK">SEK</option>
-						<option name="toCurrency" value="SGD">SGD</option>
-						<option name="toCurrency" value="THB">THB</option>
-						<option name="toCurrency" value="TRY">TRY</option>
-						<option name="toCurrency" value="USD">USD</option>
-						<option name="toCurrency" value="ZAR">ZAR</option>
-					</select>
-				</div>
-				<div class="col-md-12">
-					<label>Amount</label>
-					<input [(ngModel)]="amount" type="text" required="required" class="form-control" name="amount">
-				</div>
-				<div class="col-md-12">
-					<input type="submit" class="btn btn-primary" value="Calculate">
-				</div>
-			</form>
-		</div>
+<div class="row">
+	<h2 class="page-header">Calculator</h2>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<form (submit)="onCalculateSubmit()">
+			<div class="col-md-12">
+				<label>From the currency I have:</label>
+				<select [(ngModel)]="fromCurrency" required="required" class="form-control" name="fromCurrency">
+					<option name="fromCurrency" value="AUD">AUD</option>
+					<option name="fromCurrency" value="BGN">BGN</option>
+					<option name="fromCurrency" value="BRL">BRL</option>
+					<option name="fromCurrency" value="CAD">CAD</option>
+					<option name="fromCurrency" value="CHF">CHF</option>
+					<option name="fromCurrency" value="CNY">CNY</option>
+					<option name="fromCurrency" value="CZK">CZK</option>
+					<option name="fromCurrency" value="DKK">DKK</option>
+					<option name="fromCurrency" value="EUR">EUR</option>
+					<option name="fromCurrency" value="GBP">GBP</option>
+					<option name="fromCurrency" value="HKD">HKD</option>
+					<option name="fromCurrency" value="HRK">HRK</option>
+					<option name="fromCurrency" value="HUF">HUF</option>
+					<option name="fromCurrency" value="ILS">ILS</option>
+					<option name="fromCurrency" value="INR">INR</option>
+					<option name="fromCurrency" value="JPY">JPY</option>
+					<option name="fromCurrency" value="KRW">KRW</option>
+					<option name="fromCurrency" value="MXN">MXN</option>
+					<option name="fromCurrency" value="MYR">MYR</option>
+					<option name="fromCurrency" value="NOK">NOK</option>
+					<option name="fromCurrency" value="NZD">NZD</option>
+					<option name="fromCurrency" value="PHP">PHP</option>
+					<option name="fromCurrency" value="PLN">PLN</option>
+					<option name="fromCurrency" value="RON">RON</option>
+					<option name="fromCurrency" value="RUB">RUB</option>
+					<option name="fromCurrency" value="SEK">SEK</option>
+					<option name="fromCurrency" value="SGD">SGD</option>
+					<option name="fromCurrency" value="THB">THB</option>
+					<option name="fromCurrency" value="TRY">TRY</option>
+					<option name="fromCurrency" value="USD">USD</option>
+					<option name="fromCurrency" value="ZAR">ZAR</option>
+				</select>
+			</div>
+			<div class="col-md-12">
+				<label>To the currency I want:</label>
+				<select [(ngModel)]="toCurrency" required="required" class="form-control" name="toCurrency">
+					<option name="toCurrency" value="AUD">AUD</option>
+					<option name="toCurrency" value="BGN">BGN</option>
+					<option name="toCurrency" value="BRL">BRL</option>
+					<option name="toCurrency" value="CAD">CAD</option>
+					<option name="toCurrency" value="CHF">CHF</option>
+					<option name="toCurrency" value="CNY">CNY</option>
+					<option name="toCurrency" value="CZK">CZK</option>
+					<option name="toCurrency" value="DKK">DKK</option>
+					<option name="toCurrency" value="EUR">EUR</option>
+					<option name="toCurrency" value="GBP">GBP</option>
+					<option name="toCurrency" value="HKD">HKD</option>
+					<option name="toCurrency" value="HRK">HRK</option>
+					<option name="toCurrency" value="HUF">HUF</option>
+					<option name="toCurrency" value="ILS">ILS</option>
+					<option name="toCurrency" value="INR">INR</option>
+					<option name="toCurrency" value="JPY">JPY</option>
+					<option name="toCurrency" value="KRW">KRW</option>
+					<option name="toCurrency" value="MXN">MXN</option>
+					<option name="toCurrency" value="MYR">MYR</option>
+					<option name="toCurrency" value="NOK">NOK</option>
+					<option name="toCurrency" value="NZD">NZD</option>
+					<option name="toCurrency" value="PHP">PHP</option>
+					<option name="toCurrency" value="PLN">PLN</option>
+					<option name="toCurrency" value="RON">RON</option>
+					<option name="toCurrency" value="RUB">RUB</option>
+					<option name="toCurrency" value="SEK">SEK</option>
+					<option name="toCurrency" value="SGD">SGD</option>
+					<option name="toCurrency" value="THB">THB</option>
+					<option name="toCurrency" value="TRY">TRY</option>
+					<option name="toCurrency" value="USD">USD</option>
+					<option name="toCurrency" value="ZAR">ZAR</option>
+				</select>
+			</div>
+			<div class="col-md-12">
+				<label>Amount</label>
+				<input [(ngModel)]="amount" type="text" required="required" class="form-control" name="amount">
+			</div>
+			<div class="col-md-12">
+				<input type="submit" class="btn btn-primary" value="Calculate">
+			</div>
+		</form>
 	</div>
 </div>

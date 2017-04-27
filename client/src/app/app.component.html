@@ -1,15 +1,21 @@
-<app-navbar></app-navbar>
-<div class="main">
+<div class="container-fluid">
 	<div class="row">
-		<h4 class="col-md-6" align="left">
-			Fantastic Four
-		</h4>
-		<h4 class="col-md-6" align="right">
-			Fxr Calculator
-		</h4>
-	</div>
-	<router-outlet></router-outlet>
-	<div class="col-md-6">
-		<flash-messages></flash-messages>
+		<div class="col-lg-2">
+			<navbar></navbar>
+		</div>
+		<div class="col-lg-10">
+			<div class="row">
+				<div class="col-lg-6" align="left">Fantastic Four</div>
+				<div class="col-lg-6" align="right">Fxr Calculator</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<router-outlet></router-outlet>
+					<div class="col-lg-6">
+						<flash-messages></flash-messages>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
