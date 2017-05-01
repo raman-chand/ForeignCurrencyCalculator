@@ -87,4 +87,12 @@ export class AuthService {
   		.map(res => res.json());
   }
 
+  // Dashboard auth.service
+  getLatestRates() {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/JSON');
+    return this.http.get('http://localhost:8009/dashboard/latest', {headers: headers})
+      .map(res => res.json());
+  }
+
 }

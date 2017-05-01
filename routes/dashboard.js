@@ -9,8 +9,7 @@ module.exports = {
 			console.log("Dashboard Router:: Time: ", Date.now());
 			next();
 		});
-
-		router.get('/', dashboardCon.index);
+		
 		router.get('/latest', dashboardCon.latest);
 		router.get('/historical', dashboardCon.historical);
 
