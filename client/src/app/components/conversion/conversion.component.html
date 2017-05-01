@@ -1,10 +1,13 @@
 <p>Conversion works!</p>
 
-<div>
-	<ul class="list-group">
+<div class="row">
+	<ul class="list-group col-md-8">
 		<li class="list-group-item">Base Currenct: {{fromCurrency}}</li>
 		<li class="list-group-item">Convert to Currency: {{toCurrency}}</li>
 		<li class="list-group-item">Amount: {{amount}}</li>
 		<li class="list-group-item">Converted Amount: {{convertToAmount}}</li>
 	</ul>
+</div>
+<div class="row">
+<div class="btn btn-primary col-md-4" [routerLink]="['/calculator']">Back</div>
 </div>
