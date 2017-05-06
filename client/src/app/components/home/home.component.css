@@ -20,7 +20,14 @@
 }
 
 .appCalculator {
-	padding: 8em 0;
+	padding: 3em 0;
+}
+
+.appCalculator #appCalculator-image {
+	box-shadow: -10px 10px 5px #888888;
+}
+.appCalculator #appCalculator-description {
+	padding: 5em 0;
 }
 
 .appCalculator #appCalculator-description, 
