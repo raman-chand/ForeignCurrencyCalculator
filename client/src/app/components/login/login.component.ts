@@ -28,10 +28,18 @@ export class LoginComponent implements OnInit {
   		password: this.password
   	}
 
-    if(!this.validateService.validateLoginPassword(user.password)) {
+    if(!this.validateService.validateLoginCredentials(user)) {
       this._flashMessagesService.show("Please fill in all fields.", {
         cssClass: 'alert-warning',
         timeout: 3000
+      });
+      return false;
+    }
+
+    if(!this.validateService.validateEmployeeId(user.employeeId)) {
+      this._flashMessagesService.show("The Employee Id is invalid. Only WU Supervisors have access to login", {
+        cssClass: 'alert-danger',
+        timeout: 5000
       });
       return false;
     }

@@ -42,8 +42,13 @@ export class ValidateService {
     }
   }
 
-  validateLoginPassword(password) {
-    if(password == undefined) {
+  validateEmployeeId(employeeId) {
+    const regexId = /\b[a-zA-Z]{2}[0-9]{6}\b/;
+    return regexId.test(employeeId);
+  }
+
+  validateLoginCredentials(user) {
+    if(user.employeeId == undefined || user.password == undefined) {
       return false;
     } else {
       return true;

@@ -41,9 +41,17 @@ export class RegisterComponent implements OnInit {
   		return false;
   	}
 
+    if(!this.validateService.validateEmployeeId(user.employeeId)) {
+      this._flashMessagesService.show("Your Employee Id is invalid. Only WU. Supervisors have access to register.", {
+        cssClass: 'alert-danger',
+        timeout: 5000
+      });
+      return false;
+    }
+
   	// Validate Email
   	if(!this.validateService.validateEmail(user.email)) {
-  		this._flashMessagesService.show("Your email is invalid.", {
+  		this._flashMessagesService.show("Your Email is invalid.", {
   			cssClass: 'alert-warning',
   			timeout: 3000
   		});
@@ -52,7 +60,7 @@ export class RegisterComponent implements OnInit {
 
   	// Validate Password Length
   	if(!this.validateService.validatePassword(user.password)) {
-  		this._flashMessagesService.show("The password must be longer than 6 characters.", {
+  		this._flashMessagesService.show("The Password must be longer than 6 characters.", {
   			cssClass: 'alert-warning',
   			timeout: 3000
   		});
