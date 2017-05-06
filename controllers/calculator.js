@@ -43,7 +43,7 @@ module.exports = {
       oxr.latest(() => {
         fx.rates = oxr.rates;
         fx.base = oxr.base;
-        convertToAmount = (fx(amount).from(fromCurrency).to(toCurrency));
+        convertToAmount = (fx(amount).from(fromCurrency).to(toCurrency)).toFixed(2);
         console.log(convertToAmount + "::" + amount);
         return res.json({
           success: true,
