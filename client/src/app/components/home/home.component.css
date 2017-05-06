@@ -14,6 +14,7 @@
 }
 .appHeader #appHeader-getStartedBtn .btn {
 	padding: 1em 2em;
+	width: 20%;
 }
 
 .appCalculator {
@@ -29,8 +30,23 @@
 	padding: 5em 0;
 }
 
+.appForSupervisor #appForSupervisor-description {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
 .appForSupervisor #appForSupervisor-signup-login .btn {
+	margin-top: 2em;
 	padding: 1em 2em;
+	width: 20%;
+}
+.appForSupervisor #appForSupervisor-signup-login .btn:first-child {
+	margin-right: 2em;
+}
+
+.appFooter {
+	padding: 3em 0;
 }
 
 .appFooter #appFooter-ProjectTeam {

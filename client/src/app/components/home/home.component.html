@@ -7,7 +7,7 @@
 		</div>
 		<div id="appHeader-getStartedBtn">
 			<!-- Calculator Link -->
-			<div class="btn btn-primary">Get Started</div> 
+			<div class="btn btn-primary" [routerLink]="['/calculator']">Get Started</div> 
 		</div>
 	</div>
 	<hr/>
@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div id="appCalculator-description">
-					With the Foreign Exchange Rate Currency Calculator, you can convert any amount from and to one of the 30 available currencies in our database. Just select two currencies from the dropdown menu and enter any numeric amount.
+					With the Foreign Exchange Rate Currency Calculator, you can convert a numeric amount from and to any of the 30 available currencies in our database. Just select two currencies from the dropdown menu and enter a numeric amount.
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -26,11 +26,11 @@
 	<hr/>
 	<div class="appForSupervisor">
 		<div id="appForSupervisor-description">
-			Exclusive content is available for Western Union Supervisors, such as a dashboard of the live exchange rates of the current plus 30 additional currencies. Signup and login using any of the navigable buttons below or to the side to do so.
+			Supervisors of Western Union are eligible to access our dashboard. Simply setup a user account by registering and logging in to view exclusive content, such as a list of live exchange rates for 60+ currencies in our database.
 		</div>
 		<div id="appForSupervisor-signup-login">
-			<div class="btn btn-primary">Signup</div>
-			<div class="btn btn-primary">Login</div>
+			<div class="btn btn-primary" [routerLink]="['/register']">Register</div>
+			<div class="btn btn-primary" [routerLink]="['/login']">Login</div>
 		</div>
 	</div>
 	<hr/>

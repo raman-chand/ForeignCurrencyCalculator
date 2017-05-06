@@ -6,7 +6,11 @@ form {
 }
 
 form .col-md-12 {
-	margin-top: 30px;
+	margin-top: 20px;
+}
+
+form .form-group {
+	margin-top: 20px;
 }
 
 label {
