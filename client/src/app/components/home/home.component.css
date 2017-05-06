@@ -8,6 +8,8 @@
 
 .appHeader #appHeader-heading {
 	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 5px;
 }
 .appHeader #appHeader-getStartedBtn {
 	margin-top: 1em;
@@ -51,5 +53,7 @@
 
 .appFooter #appFooter-ProjectTeam {
 	font-size: 14px;
+	font-weight: bold;
 	letter-spacing: 5px;
+	text-transform: uppercase;
 }

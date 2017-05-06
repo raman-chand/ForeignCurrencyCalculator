@@ -1,5 +1,5 @@
 nav {
-	/*border-right: 1px solid black;*/
+	background-color: #127ba3;
 	height: 100%;
 	width: 15%;
 	float: left;
@@ -16,11 +16,13 @@ nav ul.general {
 }
 
 h4 {
-	margin-left: 20px;
+	margin-left: 18px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-transform: lowercase;
 }
 
 nav ul li {
-	/*margin-bottom: -15px;*/
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -29,9 +31,11 @@ nav ul li {
 .btn {
 	width: 100%;
 	margin-bottom: 0;
+	color: #FFFFFF;
 }
 
 .btn:hover {
 	background-color: #eeeeee;
+	color: #127ba3;
 	width: 100%;
 }
