@@ -1,0 +1,39 @@
+.appHome {
+	text-align: center
+}
+
+.appHeader {
+	padding: 5em 0;
+}
+
+.appHeader #appHeader-heading {
+	font-size: 28px;
+}
+.appHeader #appHeader-getStartedBtn {
+	margin-top: 1em;
+}
+.appHeader #appHeader-getStartedBtn .btn {
+	padding: 1em 2em;
+}
+
+.appCalculator {
+	padding: 5em 0;
+}
+
+.appCalculator #appCalculator-description, 
+.appForSupervisor #appForSupervisor-description {
+	font-size: 20px;
+}
+
+.appForSupervisor {
+	padding: 5em 0;
+}
+
+.appForSupervisor #appForSupervisor-signup-login .btn {
+	padding: 1em 2em;
+}
+
+.appFooter #appFooter-ProjectTeam {
+	font-size: 14px;
+	letter-spacing: 5px;
+}

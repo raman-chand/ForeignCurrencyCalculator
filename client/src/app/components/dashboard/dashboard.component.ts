@@ -48,7 +48,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   	this.authService.getLatestRates().subscribe(data => {
   		// console.log(data.historical);
-  		// this.historical = data.historical;
       this.AUD = data.AUD;
       this.BGN = data.BGN;
       this.BRL = data.BRL;
