@@ -21,8 +21,6 @@ module.exports = {
       } else {
         res.json({success: true, msg: "Registered the calculator inputs."});
       }
-
-      console.log("This is me.");
     });
   },
   submit(req, res, next) {
@@ -34,7 +32,9 @@ module.exports = {
     // Get the last inserted document.
     db.collection('calculators').find({}).limit(1).sort({$natural:-1}).toArray((err, calculator) => {
       if (err) { throw err; }
-      if (!calculator) { return res.json({success: false, msg: "Something went wrong with getting the calculations"}); }
+      if (!calculator) { 
+        return res.json({success: false, msg: "Something went wrong with getting the calculations"}); 
+      }
       fromCurrency = calculator[0].fromCurrency;
       toCurrency = calculator[0].toCurrency;
       amount = calculator[0].amount;
@@ -44,7 +44,6 @@ module.exports = {
         fx.rates = oxr.rates;
         fx.base = oxr.base;
         convertToAmount = (fx(amount).from(fromCurrency).to(toCurrency)).toFixed(2);
-        console.log(convertToAmount + "::" + amount);
         return res.json({
           success: true,
           fromCurrency,

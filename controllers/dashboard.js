@@ -14,8 +14,6 @@ module.exports = {
 		oxr.latest(function() {
 			rates = oxr.rates;
 			base = oxr.base;
-			console.log(base);
-			console.log(oxr.rates.AUD);
 			AFN=rates.AFN;
 			ARS=rates.ARS;
 			AUD=rates.AUD;
@@ -89,7 +87,6 @@ module.exports = {
 	historical(req, res, next) {
 		oxr.historical('2001-02-03', () => {
 			var historical = oxr.rates;
-			console.log(historical);
 			return res.json({success: true, historical});
 		});
 	}
