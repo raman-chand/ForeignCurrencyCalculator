@@ -2,14 +2,14 @@
 	<h2 class="page-header">Login</h2>
 </div>
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-12">
 		<form (submit)="onLogin()">
 			<div class="form-group">
-				<label>Employee Id</label>
+				<label>Employee Id:</label>
 				<input type="text" [(ngModel)]="employeeId" name="employeeId"  class="form-control">
 			</div>
 			<div class="form-group">
-				<label>Password</label>
+				<label>Password:</label>
 				<input type="password" [(ngModel)]="password" name="password"  class="form-control">
 			</div>
 			<input type="submit" class="btn btn-primary" value="Login">

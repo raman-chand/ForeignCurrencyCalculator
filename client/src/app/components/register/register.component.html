@@ -2,22 +2,22 @@
 	<h2 class="page-header">Register</h2>
 </div>
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-12">
 		<form (submit)="onRegisterSubmit()">
 			<div class="form-group">
-				<label>Name</label>
+				<label>Name:</label>
 				<input type="text" [(ngModel)]="name" name="name" class="form-control">
 			</div>
 			<div class="form-group">
-				<label>EmployeeId</label>
+				<label>Employee Id:</label>
 				<input type="text" [(ngModel)]="employeeId" name="employeeId"  class="form-control">
 			</div>
 			<div class="form-group">
-				<label>Email</label>
+				<label>Email:</label>
 				<input type="text" [(ngModel)]="email" name="email"  class="form-control">
 			</div>
 			<div class="form-group">
-				<label>Password</label>
+				<label>Password:</label>
 				<input type="password" [(ngModel)]="password" name="password"  class="form-control">
 			</div>
 			<input type="submit" class="btn btn-primary" value="Submit">

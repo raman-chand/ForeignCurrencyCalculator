@@ -1,21 +1,21 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-	<p>Sidenav</p>
-	<ul>
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/']">Home</a></li>
-		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/calculator']">Calculator</a></li>
+	<ul class="general">
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a class="btn btn-navbar" [routerLink]="['/']">Home</a></li>
+		<li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a class="btn btn-navbar" [routerLink]="['/calculator']">Calculator</a></li>
 		<hr/>
 	</ul>
 	<!-- Move admin closer to the bottom of the nav -->
-	<h3>Admin</h3>
-	<ul>
+	<h3>Admin:</h3>
+	<br/>
+	<ul class="admin">
 		<!-- If user is not logged in -->
-		<li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/register']">Register</a></li>
-		<li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/login']">Login</a></li>
+		<li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a class="btn btn-navbar" [routerLink]="['/register']">Register</a></li>
+		<li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a class="btn btn-navbar" [routerLink]="['/login']">Login</a></li>
 
 		<!-- If User is logged in -->
-		<li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true}"><a [routerLink]="['/profile']">Profile</a></li>
-		<li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+		<li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true}"><a class="btn btn-navbar" [routerLink]="['/profile']">Profile</a></li>
+		<li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact:true }"><a class="btn btn-navbar" [routerLink]="['/dashboard']">Dashboard</a></li>
 
-		<li *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#">Logout</a></li>
+		<li *ngIf="authService.loggedIn()"><a class="btn btn-navbar" (click)="onLogoutClick()" href="#">Logout</a></li>
 	</ul>
 </nav>

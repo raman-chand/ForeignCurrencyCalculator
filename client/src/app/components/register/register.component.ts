@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
 
   	// Validate Email
   	if(!this.validateService.validateEmail(user.email)) {
-  		this._flashMessagesService.show("Looks like the email is invalid.", {
+  		this._flashMessagesService.show("Your email is invalid.", {
   			cssClass: 'alert-warning',
   			timeout: 3000
   		});
@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit {
 
   	// Validate Password Length
   	if(!this.validateService.validatePassword(user.password)) {
-  		this._flashMessagesService.show("Passwords must be longer than 6 characters.", {
+  		this._flashMessagesService.show("The password must be longer than 6 characters.", {
   			cssClass: 'alert-warning',
   			timeout: 3000
   		});

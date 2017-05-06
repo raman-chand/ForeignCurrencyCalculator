@@ -14,7 +14,7 @@ export class ValidateService {
   }
 
   validateAmount(amount) {
-  	if( isNaN(amount) || (amount == '') ) {
+  	if( isNaN(amount) || (amount == undefined) ) {
   		return false;
   	} else {
   		return true;
@@ -36,7 +36,15 @@ export class ValidateService {
 
   validatePassword(password) {
     if(password.length < 6) {
-      return false
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  validateLoginPassword(password) {
+    if(password == undefined) {
+      return false;
     } else {
       return true;
     }
