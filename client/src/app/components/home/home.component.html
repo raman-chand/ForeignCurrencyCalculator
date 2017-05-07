@@ -7,7 +7,7 @@
 		</div>
 		<div id="appHeader-getStartedBtn">
 			<!-- Calculator Link -->
-			<div class="btn btn-primary" [routerLink]="['/calculator']">Get Started</div> 
+			<div class="btn btn-primary" tooltip="Go To Calculator" tooltip-position="right" [routerLink]="['/calculator']">Get Started</div> 
 		</div>
 	</div>
 	<hr/>
@@ -29,8 +29,8 @@
 			Supervisors of Western Union are eligible to access our dashboard. Simply setup a user account by registering and logging in to view exclusive content, such as a list of live exchange rates for 60+ currencies in our database.
 		</div>
 		<div id="appForSupervisor-signup-login">
-			<div class="btn btn-primary" [routerLink]="['/register']">Register</div>
-			<div class="btn btn-primary" [routerLink]="['/login']">Login</div>
+			<div class="btn btn-primary" tooltip="Go To Registration" tooltip-position="left" [routerLink]="['/register']">Register</div>
+			<div class="btn btn-primary" tooltip="Go To Login" tooltip-position="right" [routerLink]="['/login']">Login</div>
 		</div>
 	</div>
 	<hr/>
