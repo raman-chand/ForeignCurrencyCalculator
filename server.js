@@ -26,6 +26,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 require('./config/passport')(passport);
 
+// Port Number
+const port = process.env.PORT || 8080;
+
 // View Engine backup for Angular JS
 app.engine('html', engines.nunjucks);
 app.set('view engine', 'html');
@@ -61,8 +64,11 @@ db.once('open', () => {
 	app.use('/dashboard', dashboard.registerRouter());
 	app.use('/users', users.registerRouter());
 
-	var server = app.listen(8009, () => {
-		var port = server.address().port;
+	app.listen(port, () => {
 		console.log('Express server listening on port %s.', port);
 	});
+	// var server = app.listen(8009, () => {
+	// 	var port = server.address().port;
+	// 	console.log('Express server listening on port %s.', port);
+	// });
 });

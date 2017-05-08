@@ -33,13 +33,13 @@ var AuthService = (function () {
     AuthService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/JSON');
-        return this.http.post('http://localhost:8009/users/register', user, { headers: headers })
+        return this.http.post('users/register', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/JSON');
-        return this.http.post('http://localhost:8009/users/authenticate', user, { headers: headers })
+        return this.http.post('users/authenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     // Get Request - we're not sending any (user) data to the server unlike registerUser or authenticateUser
@@ -48,7 +48,7 @@ var AuthService = (function () {
         this.loadToken(); // accesses this.authToken
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/JSON');
-        return this.http.get('http://localhost:8009/users/profile', { headers: headers })
+        return this.http.get('users/profile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     // Store user data in local storage
@@ -84,20 +84,20 @@ var AuthService = (function () {
         // Content-Type
         headers.append('Content-Type', 'application/JSON');
         // Return observable with response
-        return this.http.post('http://localhost:8009/calculator', calculator, { headers: headers })
+        return this.http.post('calculator', calculator, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getConversion = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/JSON');
-        return this.http.get('http://localhost:8009/calculator/conversion', { headers: headers })
+        return this.http.get('calculator/conversion', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     // Dashboard auth.service
     AuthService.prototype.getLatestRates = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/JSON');
-        return this.http.get('http://localhost:8009/dashboard/latest', { headers: headers })
+        return this.http.get('dashboard/latest', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     return AuthService;

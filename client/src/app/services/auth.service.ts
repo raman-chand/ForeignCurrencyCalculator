@@ -17,14 +17,14 @@ export class AuthService {
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/JSON');
-    return this.http.post('http://localhost:8009/users/register', user, {headers: headers})
+    return this.http.post('users/register', user, {headers: headers})
       .map(res => res.json());
   }
 
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/JSON');
-    return this.http.post('http://localhost:8009/users/authenticate', user, {headers: headers})
+    return this.http.post('users/authenticate', user, {headers: headers})
       .map(res => res.json());
   }
 
@@ -34,7 +34,7 @@ export class AuthService {
     this.loadToken(); // accesses this.authToken
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/JSON');
-    return this.http.get('http://localhost:8009/users/profile', {headers: headers})
+    return this.http.get('users/profile', {headers: headers})
       .map(res => res.json());
   }
 
@@ -76,14 +76,14 @@ export class AuthService {
     // Content-Type
     headers.append('Content-Type', 'application/JSON');
     // Return observable with response
-    return this.http.post('http://localhost:8009/calculator', calculator, {headers: headers})
+    return this.http.post('calculator', calculator, {headers: headers})
       .map(res => res.json());
   }
 
   getConversion() {
   	let headers = new Headers();
   	headers.append('Content-Type', 'application/JSON');
-  	return this.http.get('http://localhost:8009/calculator/conversion', {headers: headers})
+  	return this.http.get('calculator/conversion', {headers: headers})
   		.map(res => res.json());
   }
 
@@ -91,7 +91,7 @@ export class AuthService {
   getLatestRates() {
     let headers = new Headers();
     headers.append('Content-Type', 'application/JSON');
-    return this.http.get('http://localhost:8009/dashboard/latest', {headers: headers})
+    return this.http.get('dashboard/latest', {headers: headers})
       .map(res => res.json());
   }
 
