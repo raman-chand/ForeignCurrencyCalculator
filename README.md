@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Download the following into your local machine
 
-* NodeJ s + Npm
+* Node Js + Npm
 * MongoDB
 
 ### Clone Git
