@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Download the following into your local machine
 
-* NodeJS, Npm
+* NodeJ s + Npm
 * MongoDB
 
 ### Clone Git
@@ -34,12 +34,12 @@ npm start
 
 3. See application on your browser
 ```
-localhost:8009
+localhost:8080
 ```
 
 ## Built with
 
 * MongoDB
-* Angular JS
+* Angular Js
 * Express Js
 * Node Js
