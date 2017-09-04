@@ -2,9 +2,13 @@
 
 A Foreign Exchange Rate Currency Calculator in the MEAN stack.
 
+## Visit the Webapp
+The Foreign Currency Calculator web app was deployed on Heroku.
+https://lit-woodland-43857.herokuapp.com/
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine
+These instructions will get you a copy of the project up and running on your local machine.
 
 ## Prerequisities
 

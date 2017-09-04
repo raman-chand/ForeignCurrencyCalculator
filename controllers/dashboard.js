@@ -11,7 +11,7 @@ module.exports = {
 			HKD, HRK, HTG, HUF, IDR, ILS, INR, IRR, ISK, JMD, JPY, KHR, KPW, KRW, LRD, MOP, MNT, MXN, MYR, NAD, NOK,
 			NZD, OMR, PAB, PEN, PHP, PKR, PLN, QAR, RON, RSD, RUB, SAR, SEK, SGD, SLL, THB, TRY, TWD, USD, VND, XCD, ZAR;
 
-		oxr.latest(function() {
+		oxr.latest(() => {
 			rates = oxr.rates;
 			base = oxr.base;
 			AFN=rates.AFN;
